@@ -86,7 +86,10 @@ const MASK_PROPS: { [key in keyof (IMask.AllMaskedOptions & ReactMaskProps)]: un
   scale: PropTypes.number,
   signed: PropTypes.bool,
   normalizeZeros: PropTypes.bool,
-  padFractionalZeros: PropTypes.bool,
+  padFractionalZeros: PropTypes.oneOfType([
+    PropTypes.bool, 
+    PropTypes.number,
+  ]),
   min: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.instanceOf(Date),

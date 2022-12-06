@@ -310,7 +310,7 @@ declare namespace IMask {
     readonly scale: number;
     readonly signed: boolean;
     readonly normalizeZeros: boolean;
-    readonly padFractionalZeros: boolean;
+    readonly padFractionalZeros: boolean | number;
     readonly allowNegative: boolean;
     number: number;
 
